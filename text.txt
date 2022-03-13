@@ -1,0 +1,65 @@
+PROFILE SUMMARY:
+    Seeking for a Front-end Developer position to gain hands-on experience and develop my skill. 
+    Hoping to build on knowledge of Coding. Currently a Computer Science undergraduate and 
+    coming with communication skills and ability to follow instructions and take the first career step 
+    with the leading organization in technology, which focuses on enhancing human living quality with sustainability.
+
+
+SKILLS:
+Technical Skills:
+§ Python
+§ C/C++
+§ JavaScript
+§ HTML/CSS
+§ Machine Learning
+§ Software Development
+§ Data Visualization
+§ Git
+
+
+Support Skills:
+§ ProjectManagement § Leadership
+§ ProblemSolving
+
+
+EDUCATION:
+Thammasat University, Pathum Thani, Thailand    Aug 2018
+Bachelor of Science in Computer Science, minor Network Security GPA: 2.85
+
+
+
+EDUCATION EXPERIENCE: 
+Mini Project & Programming          2018 – Present
+    Project - Introduction Software Engineer Subject
+        § Connect to server with Flask and keep update data sent to server or fetch data from server to fix and 
+        hosting server at digital ocean.
+    
+    Project - Database Systems 1 Subject
+        § Developed web application for book theme park tickets using HTML, CSS, JavaScript to manage web pages and use PHP 
+        to handle back-end and MySQL to manage Database.
+
+    Project - Introduction to Cloud Computing Technology Subject
+        §Implemented check-in and check-out of building personnel System using AWS to build a server 
+        and handle all back-end processes, with some NodeJS help and
+ 
+
+WORKS EXPERIENCE:
+Project                               2021 – Present
+    Final project – Special Project 2 Subject
+        §Human Voice Identification System Using TensorFlow and Python to create a deep learning model CNN 
+        to differentiate between human voice and google translate voice and create an interface for users to 
+        record their own voice.
+
+    Participate with ARV team
+        § Collaborated with the ARV team to improve the Department of Health's COVID-19
+        Risk Assessment website using the ReactJS development tool and have been responsible 
+        for editing the Header and Footer and some content on the website.
+
+
+ACTIVITY & COMPETITION:
+§ MC of Back to school day of Computer Science              2020
+§ MC of Computer Science First Meet                         2019 - 2020
+§ MC of Computer Science Camp TU                            2019 - 2020
+§ MC of MUE Organization in Science and Technology          2020
+§ Participate in a judo Mahachai Championship tournament    2020
+§ Participate in a judo 6U tournament                       2019

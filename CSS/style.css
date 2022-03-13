@@ -1,0 +1,883 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Roboto:wght@100&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Playfair Display", sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 700;
+
+  /*========== Font size ==========*/
+  --big-font-size: 3rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+
+  --transition-all: all 300ms ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 150vh;
+  background: linear-gradient(#00201e);
+  font-family: var(--body-font);
+  max-width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.5;
+}
+
+p {
+  line-height: 1.8;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 94%;
+  margin: 0 auto;
+}
+
+section {
+  padding: 10rem 0 7rem;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+section h1 {
+  text-align: center;
+  display: block;
+  margin-bottom: 5rem;
+}
+
+img {
+  width: 100%;
+}
+
+/* <!--===================== navbar section =====================--> */
+nav {
+  width: 100%;
+  height: 5rem;
+  background: #00201e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+nav .container .logo {
+  font-size: var(--h1-font-size);
+  color: #daa520;
+  font-weight: var(--font-medium);
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+nav .container ul {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+nav .container ul li {
+  padding: 0 1rem;
+}
+
+nav .container ul li a {
+  height: 100%;
+  /* width: 9rem; */
+  /* background: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  transition: var(--transition-all);
+  font-size: 1.25rem;
+}
+
+nav .container ul li a:hover {
+  color: #daa520;
+}
+
+/* nav .container ul li a.active {
+  color: #daa520;
+} */
+
+nav .container button {
+  display: none;
+}
+/* <!--===================== Landing section =====================--> */
+section.landing {
+  display: grid;
+  place-items: center;
+  position: relative;
+  top: 1rem;
+  padding-bottom: 14rem;
+  background: url("../Image/marble.jpeg");
+}
+
+section.landing .container {
+  display: grid;
+  grid-template-columns: 8rem auto 26rem;
+}
+
+section.landing .socials {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  margin-top: 8rem;
+}
+
+section.landing .socials a {
+  font-size: var(--big-font-size);
+  color: #324249;
+  padding: 0.3rem;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-all);
+}
+
+section.landing .socials a:hover {
+  filter: opacity(80%);
+}
+
+section.landing .info h1 {
+  font-size: var(--big-font-size);
+  font-weight: var(--font-semi-bold);
+  text-align: left;
+  margin: 0;
+  color: #324249;
+}
+
+section.landing .info h1 span {
+  color: #daa520;
+}
+
+section.landing .info h3 {
+  color: #324249;
+  margin: 2.4rem 0 1rem;
+}
+
+section.landing .info p {
+  color: #324249;
+  width: 35rem;
+}
+
+section.landing .profile-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.landing .profile-area .outer-circle {
+  width: 26rem;
+  height: 26rem;
+  border: 1px solid #daa520;
+  border-radius: 50%;
+  position: relative;
+  animation: move 30s linear infinite;
+}
+
+@keyframes move {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+section.landing .profile-area .outer-circle i {
+  display: block;
+  font-size: var(--h2-font-size);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  position: absolute;
+  color: #324249;
+  background: url("../Image/marble.jpeg");
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 0 1rem #daa520;
+}
+
+section.landing .profile-area .outer-circle i:nth-child(1) {
+  left: calc(50% - 2rem);
+  top: -2rem;
+}
+
+section.landing .profile-area .outer-circle i:nth-child(2) {
+  right: -2rem;
+  top: calc(50% - 2rem);
+}
+
+section.landing .profile-area .outer-circle i:nth-child(3) {
+  left: -2rem;
+  top: calc(50% - 2rem);
+}
+
+section.landing .profile-area .outer-circle i:nth-child(4) {
+  bottom: -2rem;
+  left: calc(50% - 2rem);
+}
+
+section.landing .profile-area .inner-circle {
+  position: absolute;
+  padding: 3rem 0.5rem 0 0;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* <!--===================== About section =====================--> */
+section.about {
+  background: #00201e;
+}
+
+section.about h1 {
+  font-style: italic;
+  font-size: var(--big-font-size);
+  color: #daa520;
+  text-transform: uppercase;
+}
+
+section.about .container {
+  display: grid;
+  grid-template-columns: 26rem auto;
+  gap: 5rem;
+}
+
+section.about .container .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.about p {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.btn {
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  color: #fff;
+  background: #daa520;
+  display: inline-block;
+  margin: 0.5rem 0;
+  transition: var(--transition-all);
+}
+
+.btn:hover {
+  box-shadow: 0 0.5rem 1rem #daa5209d;
+}
+
+.btn-primary {
+  background: #daa520;
+  color: #fff;
+}
+/* <!--===================== Skills section =====================--> */
+section.skills {
+  background: #00201e;
+}
+
+section.skills h1 {
+  font-style: italic;
+  font-size: var(--big-font-size);
+  color: #daa520;
+  text-transform: uppercase;
+}
+
+section.skills .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+section.skills .container h3 {
+  font-size: var(--h3-font-size);
+  color: #324249;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+section.skills .container .left {
+  font-weight: var(--font-medium);
+  color: #324249;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 30px 30px 50px;
+  background-color: #ccc;
+  border-radius: 10px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+section.skills .container .left .details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+section.skills .container .left .bar {
+  position: relative;
+
+  border: 2px solid #00201e;
+
+  border-radius: 20px;
+}
+
+section.skills .container .left .bar div {
+  position: relative;
+  width: 0;
+  height: 9px;
+  border-radius: 10px;
+  background-color: #daa520;
+}
+
+section.skills .container .left .skills:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+section.skills .container .left #html-bar {
+  animation: html-fill 2s forwards;
+}
+
+@keyframes html-fill {
+  100% {
+    width: 90%;
+  }
+}
+
+section.skills .container .left #css-bar {
+  animation: css-fill 2s forwards;
+}
+
+@keyframes css-fill {
+  100% {
+    width: 85%;
+  }
+}
+
+section.skills .container .left #js-bar {
+  animation: js-fill 2s forwards;
+}
+
+@keyframes js-fill {
+  100% {
+    width: 72%;
+  }
+}
+
+section.skills .container .left #python-bar {
+  animation: python-fill 2s forwards;
+}
+
+@keyframes python-fill {
+  100% {
+    width: 50%;
+  }
+}
+
+section.skills .container .left #c-bar {
+  animation: c-fill 2s forwards;
+}
+
+@keyframes c-fill {
+  100% {
+    width: 60%;
+  }
+}
+
+section.skills .container .left #git-bar {
+  animation: git-fill 2s forwards;
+}
+
+@keyframes git-fill {
+  100% {
+    width: 80%;
+  }
+}
+
+section.skills .container .left #ml-bar {
+  animation: ml-fill 2s forwards;
+}
+
+@keyframes ml-fill {
+  100% {
+    width: 30%;
+  }
+}
+
+section.skills .container .left #dv-bar {
+  animation: dv-fill 2s forwards;
+}
+
+@keyframes dv-fill {
+  100% {
+    width: 20%;
+  }
+}
+
+section.skills .container .right {
+  font-weight: var(--font-medium);
+  color: #324249;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 30px 30px 50px;
+  background-color: #ccc;
+  border-radius: 10px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+section.skills .container .right .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.skills .container .right .progress-card {
+  display: inline-block;
+  text-align: center;
+}
+
+section.skills .container .right .progress-card h5 {
+  color: #324249;
+  letter-spacing: 1px;
+}
+
+section.skills .container .right .progress-card .progress-circle {
+  position: relative;
+  background: transparent;
+  border: 8px solid #00201e;
+  width: 7em;
+  height: 7em;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 2em;
+}
+
+section.skills .container .right .progress-card .progress-circle .progress {
+  width: 8em;
+  height: 8em;
+  position: absolute;
+  bottom: -100%;
+  transition: bottom 2.5s;
+  background: linear-gradient(#daa520, #fff);
+}
+
+section.skills
+  .container
+  .right
+  .progress-card
+  .progress-circle
+  .progress-content {
+  background: #324249;
+  width: 5.5em;
+  height: 5.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+section.skills
+  .container
+  .right
+  .progress-card
+  .progress-circle
+  .progress-content
+  h5 {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  color: #daa520;
+}
+
+/* <!--===================== Work experirnce section =====================--> */
+section.work-ex {
+  background: #00201e;
+}
+
+section.work-ex .container h3 {
+  font-size: var(--h2-font-size);
+  text-align: left;
+  color: #daa520;
+  font-weight: var(--font-medium);
+  text-transform: uppercase;
+}
+
+section.work-ex h1 {
+  font-size: var(--h1-font-size);
+  text-align: left;
+  color: #daa520;
+  font-weight: var(--font-medium);
+
+  margin: 3rem 0 1rem;
+  width: 65%;
+}
+
+section.work-ex .container .projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+section.work-ex .container .projects h2 {
+  font-size: var(--h2-font-size);
+  text-align: left;
+  color: #daa520;
+  font-weight: var(--font-semi-bold);
+}
+
+section.work-ex .container .projects p {
+  font-size: var(--normal-font-size);
+  text-align: left;
+  color: #daa520;
+  font-weight: var(--font-medium);
+}
+
+section.work-ex .container .projects .project {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* <!--===================== Footer section =====================--> */
+.footer {
+  background: url("../Image/marble.jpeg");
+  height: auto;
+}
+
+.footer .container h2 {
+  font-size: var(--big-font-size);
+  text-align: left;
+  color: #324249;
+  font-weight: var(--font-semi-bold);
+}
+
+.footer .container p {
+  font-size: var(--h2-font-size);
+  text-align: left;
+  color: #324249;
+  font-weight: var(--font-medium);
+}
+
+.footer .container .address {
+  font-size: var(--h3-font-size);
+  text-align: left;
+  color: #324249;
+  font-weight: var(--font-medium);
+}
+
+.footer .container .mail {
+  font-size: var(--h3-font-size);
+  text-align: left;
+  color: #324249;
+  font-weight: var(--font-medium);
+}
+
+/* <!--===================== Media Queries (Phone) =====================--> */
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  h5 {
+    font-size: 0.68rem;
+  }
+
+  /* <!--===================== navbar section =====================--> */
+  nav .container {
+    width: 100%;
+  }
+
+  nav .container .logo {
+    font-size: var(--h3-font-size);
+    margin-left: 1rem;
+  }
+
+  nav .container ul {
+    position: fixed;
+    top: 0;
+    flex-direction: column;
+    z-index: 3;
+    width: 16rem;
+    height: 100vh;
+    background: #00201e;
+    justify-content: flex-start;
+    display: none;
+  }
+
+  nav .container ul li {
+    height: 4.6rem;
+    width: 100%;
+  }
+
+  nav .container ul li a {
+    width: 100%;
+    justify-content: start;
+    padding-left: 2rem;
+  }
+
+  nav .container ul li a:hover {
+    color: #daa520;
+    padding-left: 3rem;
+  }
+
+  nav .container button {
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+    color: #daa520;
+    margin-right: 1rem;
+    font-size: var(--h1-font-size);
+    border: none;
+  }
+
+  nav .container button#nav-close {
+    display: none;
+  }
+
+  /* <!--===================== Landing section =====================--> */
+  section.landing {
+    margin-top: -4rem;
+    padding-bottom: 7rem;
+    max-width: 100vw;
+    height: 150vh;
+    overflow: hidden;
+  }
+
+  section.landing .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 50%;
+    text-align: center;
+    row-gap: 6rem;
+  }
+
+  section.landing .socials {
+    display: none;
+  }
+
+  section.landing .info h1 {
+    font-size: var(--big-font-size);
+    font-weight: var(--font-semi-bold);
+    text-align: left;
+    margin: 0;
+    color: #324249;
+  }
+
+  section.landing .info {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  section.landing .info h1 {
+    text-align: center;
+  }
+
+  section.landing .info h3 {
+    margin: 0 auto;
+    width: 92%;
+  }
+
+  section.landing .info p {
+    margin: 0 auto;
+    width: 92%;
+  }
+
+  section.landing .profile-area {
+    grid-row: 1;
+    width: 94%;
+    margin: 9rem auto;
+  }
+
+  section.landing .profile-area .outer-circle {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  section.landing .profile-area .outer-circle i {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  section.landing .profile-area .outer-circle i:nth-child(1) {
+    left: calc(50% - 1.5rem);
+    top: -1.5rem;
+  }
+
+  section.landing .profile-area .outer-circle i:nth-child(2) {
+    right: -1.5rem;
+    top: calc(50% - 1.5rem);
+  }
+
+  section.landing .profile-area .outer-circle i:nth-child(3) {
+    left: -1.5rem;
+    top: calc(50% - 1.5rem);
+  }
+
+  section.landing .profile-area .outer-circle i:nth-child(4) {
+    bottom: -1.5rem;
+    left: calc(50% - 1.5rem);
+  }
+
+  section.landing .profile-area .inner-circle {
+    width: 16rem;
+    height: 18rem;
+  }
+
+  /* <!--===================== About section =====================--> */
+  section.about .container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  /* <!--===================== Skills section =====================--> */
+  section.skills .container {
+    flex-direction: column;
+  }
+
+  section.skills .container h3 {
+    font-size: var(--h2-font-size);
+  }
+
+  section.skills .container .right .progress-card .progress-circle {
+    width: 6em;
+    height: 6em;
+  }
+
+  section.skills .container .right .progress-card .progress-circle .progress {
+    width: 7em;
+    height: 7em;
+  }
+
+  section.skills
+    .container
+    .right
+    .progress-card
+    .progress-circle
+    .progress-content {
+    width: 4.5em;
+    height: 4.5em;
+  }
+
+  /* <!--===================== Work experirnce section =====================--> */
+  section.work-ex .container .projects {
+    grid-template-columns: 1fr;
+  }
+
+  section.work-ex .container h3 {
+    width: 94vw;
+    margin: 1.4rem 0 1rem;
+  }
+
+  section.work-ex .container .projects h2 {
+    font-size: var(--h2-font-size);
+    text-align: left;
+    color: #daa520;
+    font-weight: var(--font-semi-bold);
+  }
+
+  section.work-ex .container .projects p {
+    font-size: var(--normal-font-size);
+    text-align: left;
+    color: #daa520;
+    font-weight: var(--font-medium);
+  }
+
+  section.work-ex .container .projects .project {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* <!--===================== footer section =====================--> */
+
+  .footer .container h2 {
+    font-size: var(--big-font-size);
+  }
+
+  .footer .container p {
+    font-size: var(--normal-font-size);
+  }
+
+  .footer .container .address {
+    font-size: var(--normal-font-size);
+    text-align: left;
+    color: #324249;
+    font-weight: var(--font-medium);
+  }
+
+  .footer .container .mail {
+    font-size: var(--normal-font-size);
+    text-align: left;
+    color: #324249;
+    font-weight: var(--font-medium);
+  }
+}
