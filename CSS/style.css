@@ -164,7 +164,7 @@ section.landing {
 
 section.landing .container {
   display: grid;
-  grid-template-columns: 8rem auto 26rem;
+  grid-template-columns: 8rem auto 35rem;
 }
 
 section.landing .socials {
